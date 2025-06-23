@@ -1,0 +1,22 @@
+* {
+    background-color: black;
+    color: white;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.input input {
+    min-height:200px;
+}
