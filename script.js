@@ -2,14 +2,19 @@ let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 renderTasks();
 
 function addTask(taskText){
-    const newTask = {
-        id: Date.now(),
-        text: taskText,
-        completed: false
-    };
-    tasks.push(newTask);
-    saveAndRender();
-    document.getElementById("task-input").value = "";
+    if (taskText === ""){
+        renderTasks();
+    } else {
+        const newTask = {
+            id: Date.now(),
+            text: taskText,
+            completed: false
+        };
+        tasks.push(newTask);
+        saveAndRender();
+        document.getElementById("task-input").value = "";
+    }
+    
 }
 
 function deleteTask(taskId){
@@ -59,3 +64,9 @@ function renderTasks(){
         taskList.appendChild(li);
     });
 }
+
+document.addEventListener("keypress", (event) => {
+    if(event.key === "Enter"){
+        addTask(document.getElementById('task-input').value);
+    }
+})
