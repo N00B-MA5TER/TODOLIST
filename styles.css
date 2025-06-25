@@ -52,7 +52,7 @@ ul li{
     justify-content: space-evenly;
     align-items: center;
     font-size: large;
-    border: 2px solid white;
+    border: 0.5px solid white;
     border-radius: 20px;
     min-height: 100px;
     min-width: 50%;
